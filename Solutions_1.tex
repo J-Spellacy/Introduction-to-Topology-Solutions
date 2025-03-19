@@ -1,0 +1,45 @@
+1. Determine whether each of the following statements is true or false:
+(a) For each set $A$, $A \in 2^{A}$.
+
+True, $2^{A} = \{$all subsets of $A \}$, If $\exists  a \in A$, $ A' = \{a\}$, $ A' \subset A$  $\therefore A' \in 2^{A}$, $A = \{a \mid \forall a \in A \}$ $A \subseteq A$  $\therefore A \in 2^A$
+
+(b) For each set $A$, $A \subset 2^{A}$.
+
+False, although,  If $A = \{a \mid \forall a \in A \}$ $\therefore A \subseteq A$  $\therefore A \in 2^{A}$, The elements of $2^{A}$ are themselves sets so a subset would also need to contain sets in $2^{A}$ (or subsets of $A$), such as $\{ A\}$,  $\{A'\}$ (from previous solution) or $\{ A, A'\}$
+
+(c) For each set $A$, $\{A\} \subset 2^{A}$.
+
+True, as $A = \{a \mid \forall a \in A \}$ , $A \subseteq  A$, $A \in 2^{A}$ $\therefore \forall A\in \{A\} $,  $A \in 2^{A}$  $\therefore \{ A\} \subset 2^{A}$
+
+(d) For each set $A$, $\emptyset \in 2^{A}$.
+
+True, $A = \{A, \emptyset \}$, since $\forall  \in \emptyset$, $ \in A$ (nothing can exist alongside anything no matter how you define a set of that thing) $\therefore \emptyset \subset A$ $\therefore \emptyset \in 2^{A}$
+
+(e) For each set $A$, $\emptyset \subset 2^{A}$.
+
+True, for each set including  $2^{A} = \{2^{A},\emptyset \}$ (reason described above still applies) $\therefore \emptyset \subset 2^{A}$
+
+(f) There are no members of the set $\{ \emptyset \}$. 
+
+False, there is one member $\emptyset \in \{ \emptyset \}$ which itself has no members, but which the empty set is a subset of, $\emptyset \subset \emptyset$
+
+(g) Let $A$ and $B$ be sets. If $A \subset B$, then $2^{A} \subset 2^{B}$.
+
+True, $\forall a \in A$, $a \in B$ $\therefore \forall X \subset A$, $X \in 2^{A}$, $X \subset B$ $\therefore 2^{A} \subset B$ $\therefore 2^{A} \subset 2^{B}$
+
+(h) There are two distinct objects that belong to the set $\{\emptyset, \{\emptyset\}\}$.
+
+True, since the first: $\emptyset \not \in  \emptyset$, but for the second: $\emptyset \in \{ \emptyset\}$ $\therefore \emptyset \not = \{ \emptyset \}$ and since $\emptyset, \{\emptyset\} \in \{\emptyset, \{\emptyset\}\}$, there are two distinct objects in the set.
+
+2. Let $A$, $B$, $C$ be sets. Prove that if $A \subset B$ and $B \subset C$, then $A \subset C$. 
+
+$\forall a \in A$, $a \in B$ s.t. $B \subset C$ $\implies \forall a \in A$, $a \in  C$ $\therefore A \subset C$
+
+3. Let $A_{1}, ..., A_{n}$ be sets. Prove that if $A_{1} \subset A_{2}, A_{2} \subset A_{3}, ...,A_{n-1} \subset A_{n}$ and $A_{n} \subset A_{1}$ then $A_{1} = A_{2} = ... = A_{n}$.
+
+Let us suppose that $A_{1} \not = A_{2} \not =...\not=A_{n}$.
+If $A_{n} \subset A_{1}$ and $A_{2} \subset A_{n} \therefore A_{2} \subset A_{1} \therefore A_{1} \subset A_{2} \subset A_{1}, A_{1} = A_{2}$ which disproves the supposition, meaning if $A_{1} \subset A_{2}, A_{2} \subset A_{3}, ...,A_{n-1} \subset A_{n} \iff A_{1} = A_{2} = ... = A_{n}$
+
+
+
+
