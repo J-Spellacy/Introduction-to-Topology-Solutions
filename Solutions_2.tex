@@ -1,0 +1,48 @@
+1. Let $A \subset S$, $B \subset S$. Prove the following:
+(a) $A \subset B$ if and only if $A \cup B = B$.
+
+if $A \cup B \not = B \therefore \exists a \in A$ s.t.  $a \not \in B$ $\therefore A \not \subset B$ $\therefore A\subset B \iff A \cup B = B$
+
+(b) $A \subset B$ if and only if $A \cap B = A$.
+
+if $A \cap B \not = A \therefore \exists a \in A$ s.t. $a \not \in B \therefore A \not\subset B \therefore A \subset B\iff A \cap B = A$
+
+(c) $A \subset \complement(B)$ if and only if $A \cap B = \emptyset$.
+
+    if $A \cap B \not = \emptyset \therefore \exists a \in A , a \in B \therefore A \cap B  \not =\emptyset$ as $\emptyset$ contains no elements and so cannot contain $a$ $\therefore A \cap B = \emptyset \iff A\subset \complement(B)$
+
+(d) $\complement(A) \subset B$ if and only if $A \cup B = S$.
+
+if $A \cup B \not = S$, $A \subset S$, $B \subset S$ $ \therefore \exists s \in S$ s.t. $s \not \in A$, $s \not \in B \therefore s \in \complement(A), s \not \in B \therefore \complement(A) \not \subset B$, $\therefore \complement(A) \subset B \iff A \cup B = S$
+
+(e) $A \subset B$ if and only if $\complement(B) \subset \complement(A)$.
+
+if  $\complement(B) \not \subset \complement(A), A \subset S, B\subset S \implies \exists s \in S, s\in \complement(B), s \not \in \complement(A) \therefore s\in A, s\not \in B \therefore A \not \subset B$
+$\therefore A \subset B \iff \complement(B) \subset \complement(A)$
+
+(f) $A \subset \complement(B)$ if and only if $B \subset \complement(A)$.
+
+if $B \not \subset \complement(A) \implies \exists b \in B, b \in A \therefore b \not \in \complement(B) \therefore A \not \subset \complement(B)$
+$\therefore A \subset \complement(B) \iff B \subset \complement(A)$
+
+2. Let $X \subset Y \subset Z$. Prove the following:
+(a) $\complement_{Y}(X) \subset \complement_{Z}(X)$.
+
+
+$\complement_{Y}(X)= \{y \mid y \in Y, y \not \in X\}$ given $Y \subset Z \therefore \forall y' \in Y, y' \in Z \therefore \forall y \in \complement_{Y}(X), y \in Z, y \not \in  X \therefore \forall y \in \complement_{Y}(X), y \in \complement_{Z}(X)$
+$\therefore \complement_{Y}(X) \subset \complement_{Z}(X)$
+
+(b) $Z - (Y - X ) = X \cup (Z - Y)$.
+
+
+$Z - (Y - X) =A =  \{ z \mid z \in Z \ s.t. z \in X, z \in X \cap Y, z \not \in \complement_{Y}(X)\} \therefore \forall z \in A, z \in X \cup \complement_{Z}(Y)$ or $Z - (Y - X ) \subset X \cup (Z - Y)$ 
+
+$X \cup (Z - Y) = B = \{z \mid z \in X, z  \in  \complement_{z}(Y)\} \therefore z \in \complement_{z}(\complement_{Y}(X)) $ since $\forall z \in Y, z\in X \cap Y$ $\therefore \forall z \in B, z\in Z - (Y-X)$ or $X \cup (Z - Y) \subset Z - (Y - X )$
+
+given $Z - (Y - X ) \subset X \cup (Z - Y)$ and $X \cup (Z - Y) \subset Z - (Y - X )$ $\therefore Z - (Y - X ) = X \cup (Z - Y)$
+
+
+
+
+
+
