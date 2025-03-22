@@ -18,4 +18,100 @@ $\therefore \forall \beta \in I, \cap_{\alpha \in I} A_{\alpha} \subset A_{\beta
 
 (c) $\cup_{\alpha \in I} (A_{\alpha} \cup B_{\alpha}) = (\cup_{\alpha\in I} A_{\alpha}) \cup (\cup_{\alpha \in I} B_{\alpha})$.
 
-$$
+$\cup_{\alpha \in I} (A_{\alpha} \cup B_{\alpha})  = \{ c \mid c \in (\cup_{\alpha \in I} B_{\alpha}) \cup  (\cup_{\alpha\in I} A_{\alpha}) \} $ $\iff  \forall \alpha \in I, A_{\alpha} \subset \cup_{\alpha \in I} A_{\alpha}, B_{\alpha} \subset \cup_{\alpha \in I}B_{\alpha} $ 
+
+Since, by definition, $\forall a \in A_{\alpha}, a \in \cup_{\alpha \in I} A_{\alpha}$, similarly, $\forall b \in B_{\alpha}, b \in \cup_{\alpha \in I} B_{\alpha}$
+
+$\therefore \cup_{\alpha \in I} (A_{\alpha} \cup B_{\alpha}) = (\cup_{\alpha\in I} A_{\alpha}) \cup (\cup_{\alpha \in I} B_{\alpha})$
+
+
+(d) $\cap_{\alpha \in I } (A_{\alpha } \cap B_{\alpha}) = (\cap_{\alpha \in I} A_{\alpha}) \cap (\cap_{\alpha \in I} B_{\alpha})$.
+
+$\cap_{\alpha \in I} (A_{\alpha} \cap B_{\alpha}) = \{c \mid c\in  A_{\alpha}, c\in B_{\alpha}, \forall \alpha \in I\} \iff \exists c \in A_{\alpha}, c \in B_{\alpha}, \forall \alpha \in I$
+
+$c \in (\cap_{\alpha \in I} A_{\alpha}) \cap (\cap_{\alpha \in I} B_{\alpha}) \iff \exists c \in A_{\alpha}, c \in B_{\alpha}, \forall \alpha \in I $
+
+Same condition required for both to be true, therefore they are equivelant. (I think)
+
+(e) If for each $\beta \in I, A_{\beta} \subset B_{\beta}, then$ $$ \cup_{\alpha \in I} A_{\alpha} \subset \cup_{\alpha \in I} B_{\alpha},$$ $$ \cap_{\alpha \in I } A_{\alpha} \subset \cap_{\alpha \in I } B_{\alpha}.$$ 
+$\cup_{\alpha \in I} A_{\alpha} = \{ a \mid a \in A_{\alpha}, \exists \alpha \in I \}$, 
+Since $A_{\beta} \subset B_{\beta}, \forall \beta \in I \therefore a \in \cup_{\alpha \in I} B_{\alpha} \iff \exists a \in A_{\alpha}, \exists \beta \in I, \alpha = \beta \ s.t. \  A_{\alpha} \subset B_{\alpha}$
+This is true as $\alpha \in I$ and $A_{\beta} \subset B_{\beta}, \forall \beta \in I$ I.e. true for all $\beta \in I$
+
+$\cap_{\alpha \in I} A_{\alpha} = \{ a \mid a \in  A_{\alpha}, \forall \alpha \in I\} $
+$a \in \cap_{\alpha \in I} B_{\alpha} \iff \forall \alpha \in I ,\exists \beta \in I \ s.t. \ \alpha = \beta,A_{\beta} \subset B_{\alpha}$
+Since $A_{\beta} \subset B_{\beta}, \forall \beta \in I \therefore \forall \alpha \in I,  \ A_{\alpha} \subset B_{\alpha}  \implies a \in B_{\alpha}$
+$\therefore \cap_{\alpha \in I } A_{\alpha} \subset \cap_{\alpha \in I } B_{\alpha}$
+
+(f) Let $D \subset S$. Then $$\cup_{\alpha \in I} (A_{\alpha} \cap D) = (\cup_{\alpha \in I} A_{\alpha}) \cap D,$$ $$ \cap_{\alpha \in I } (A_{\alpha} \cup D) = (\cap_{\alpha \in I} A_{\alpha} ) \cup D.$$
+$\cup_{\alpha \in I}(A_{\alpha} \cap D) = \{ a \mid \exists \alpha \in I, (a \in A_{\alpha}) \cap (a \in D)\}$
+$\therefore \forall a \in \cup_{\alpha \in I}(A_{\alpha} \cap D), a \in D, \exists \alpha \in I \ s.t.\ a \in A_{\alpha} \therefore a \in (\cup_{\alpha \in I}A_{\alpha}) \cap D$
+$\therefore \cup_{\alpha \in I} (A_{\alpha} \cap D) \subset (\cup_{\alpha \in I} A_{\alpha}) \cap D$
+alternatively, $(\cup_{\alpha \in  I} A_{\alpha}) \cap D = \{ a \mid \exists \alpha \in I, (a \in A_{\alpha}) \cap (a \in D)\}$
+using the same logic as before it can be shown that $\forall a \in (\cup_{\alpha \in  I} A_{\alpha}) \cap D , a \in \cup_{\alpha \in I}(A_{\alpha} \cap D)$
+$\therefore (\cup_{\alpha \in I} A_{\alpha}) \cap D \subset \cup_{\alpha \in I} (A_{\alpha} \cap D)$
+$\therefore \cup_{\alpha \in I} (A_{\alpha} \cap D) = (\cup_{\alpha \in I} A_{\alpha}) \cap D$
+
+for $\cap_{\alpha \in I } (A_{\alpha} \cup D) = \{ a \mid \forall \alpha \in I, (a \in A_{\alpha}) \cup (a \in D) \} $
+$a \in (\cap_{\alpha \in I} A_{\alpha} ) \cup D \iff \forall \alpha \in I, (a \in D) \cup (a \in A_{\alpha}) $
+equivelant conditions for truth so equivelant statements, another way of putting it is if $a \not \in A_{\alpha}$ then it has to be in $D$ for both and it is only in those two
+
+2. Let $A, B, C, D \subset S$. Then $$A \cap (B\cup D) = (A \cap B) \cup (A \cap D)$$ $$ A \cup (B\cap D) = (A \cup B) \cap (A \cup D)$$
+
+$A \cap (B \cup D) = \{ x \mid x \in A, (\exists x \in B) \cup (\exists x \in D)\}$
+$x \in (A \cap B) \cup (A \cap D) \iff x \in A,( \exists x \in B) \cup (\exists x \in D)$ since $x \in A$ for both conditions $(A \cap B), (A \cap D)$ and must exist in one or the other otherwise the union would be empty for both and x could not be a member of an empty set otherwise it wouldn't be empty lol
+
+both of these conditions are equivalent and so both sets are populated by the same members regardless of whether the statements are true or not (both would be empty if one of the statements was false) making them equivelant
+
+for $A \cup (B \cap D) = \{ x \mid (\exists x \in A) \cup (\exists x \in (B \cap D)) \} = X$
+$x \in (A \cup B) \cap (A \cup D) \iff \forall x\in  X, x  \in (A \cup B), x \in ( A \cup D) \implies (\exists x \in A) \cup  (\exists x \in (B \cup D))$ Since if $x \in A, x \in X$ alternatively if $x \in B, x \not \in D $ or vice versa, then $x \in X$ and if $x \in A \cap B$ or $x \in A \cap D$ then $x \in X$ satisfying both sets of conditions and since both conditions are equivelant then both statements are equal
+
+3. Let $\{ A_{\alpha} \}_{\alpha \in I}$ be an indexed family of subsets of a set S. Let $ J \subset I$. Prove that
+
+(a) $\cap_{\alpha \in J} A_{\alpha} \supset \cap_{\alpha \in I} A_{\alpha}$
+
+$\cap_{\alpha \in I} A_{\alpha}= \{ a \mid \forall \alpha  \in I, a \in A_{\alpha}\}$ 
+Since $J \subset I \therefore\forall \alpha \in J, \alpha \in I$
+$\therefore \forall \alpha \in J, a \in A_{\alpha}$
+$\therefore  \cap_{\alpha \in I} A_{\alpha} \subset \cap_{\alpha \in J} A_{\alpha}$
+
+(b) $\cup_{\alpha \in J} A_{\alpha} \subset \cup_{\alpha \in I}A_{\alpha}$
+
+since $\forall \alpha \in J, \alpha \in I \therefore \forall \alpha \in J, \forall a \in \cup_{\alpha \in J} A_{\alpha}, a \in \cup_{\alpha \in I} A_{\alpha}$
+$\therefore \cup_{\alpha \in J} A_{\alpha} \subset \cup_{\alpha \in I} A_{\alpha} $
+
+4. Let$ \{ A_{\alpha}\}_{\alpha \in I} $ be an indexed family of subsets of a set S. Let $B \subset S$. Prove that
+
+ (a) $B \subset \cap_{\alpha \in I} A_{\alpha}$ if and only if for each $\beta \in I, B \subset A_{\beta}$.
+
+let  $ X = \cap_{\alpha \in I} A_{\alpha} =  \{ x \mid \forall \alpha \in I,  x \in A_{\alpha}\}, B \subset X$ and that $\exists \beta \in I\ s.t.\ ,B \not \subset A_{\beta}$
+$\therefore \exists x \in B, x \in X, \exists \alpha \in I\ s.t.\ x \not \in A_{\alpha}$
+however by definition of $X, x\not \in X$
+$\therefore B \subset \cap_{\alpha \in I} A_{\alpha} \iff \beta \in I, B \subset A_{\beta}$
+
+(b) $\cup_{\alpha \in I} A_{\alpha} \subset B$ if and only if for each $\beta \in I, A_{\beta} \subset B$.
+
+
+let $X = \cup_{\alpha \in I} A_{\alpha} = \{ x \mid \exists \alpha \in I, x \in A_{\alpha}, X \subset B\}$ and that $\exists \beta \in I\ s.t.\ ,B \not \supset A_{\beta}$
+$\therefore \exists x \in X, \exists \alpha \in I, x \in A_{\alpha}\ s.t.\ x \not \in B$
+$\therefore \exists x \in X, x\not \in B \therefore X \not \subset B$
+$\therefore \cup_{\alpha \in I} A_{\alpha} \subset B \iff \beta \in I, A_{\beta} \subset B$
+
+5. Let $I$ be the set of real numbers that are greater than $0$. For each $x \in I$, let $A_{x}$ be the open interval $(0, x)$. 
+Prove that $\cap_{x\in I} A_{x} = \emptyset$, $\cup_{x \in I} A_{x} = I$. 
+For each $x\in I$, let $B_{x}$ be the closed interval $[ 0, x]$.  
+Prove that $\cap_{x \in I } B_{x} = \{ 0\}$, $\cup_{x \in I} B_{x} = I \cup \{ 0\}$.
+
+for open intervals
+$A_{x} = \{ a \mid a < x, a > 0\}$
+since for each $x \in I$ there is always $x' < x, 0 \not \in A_{x}\therefore x \not \in \cap_{x\in I}A_{x}$  Since any value larger than $x'$ cannot be in $A_{x'}$
+$\therefore \cap_{x \in I}A_{x} = \{\} = \emptyset$
+alternatively for each $x $ there is a larger $x'>x\ s.t.\ x \in A_{x'}$ 
+$\therefore x \in \cup_{x \in I} A_{x}$, given that $0 \not \in A_{x}, \forall x \in I$
+$\therefore \cup_{x \in I } A_{x} = I$
+
+for closed intervals
+$A_{x} = \{ a \mid a  \leq x, a \geq 0\}$
+in the same way $\forall x\in I, \exists x_{i+1} \ s.t. x_{i+1} < x \therefore x \not \in  A_{x_{i+1}}$ since no $x \in I$ can be a member of the set
+$\therefore \cap_{x \in I} A_{x} = \{0\}$
+alternatively, $\forall x\in I$ through the same argument as for open sets $I \subset U_{x \in I}A_{x}$, as $A_{x}$ are closed sets inclusive of $0, \therefore \cup_{x \in I} A_{x} = I \cup \{ 0\}$
