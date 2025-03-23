@@ -1,0 +1,27 @@
+1. Let $X \subset A, Y \subset B$. Prove that $$\complement (X \times Y) = A \times \complement(Y) \cup \complement(X) \times B$$
+
+$\complement(X \times Y) = \complement_{A\times B}(X \times Y)$ since contextually there is no greater product set mentioned and the complement must be within a set containing the set itself, so all members need to be ordered pairs as well.
+
+$\complement(X \times Y) = \{ (a, b) \mid (a \in A) \cup (a \not\in X), (b \in B) \cup (b \not \in Y) \}$
+$A \times \complement(Y) = \{(a, b) \mid a \in  A, b \in \complement(Y)\}$
+$\complement(X) \times B = \{ (a, b) \mid a \in \complement(X), b \in B\}$
+$\therefore (a, b) \in A \times \complement(Y) \cup \complement(X) \times B \iff (a \in A) \cup (a \not \in X), (b \in B) \cup (b \not \in Y)$
+since $A \times \complement(Y) \cup \complement(X) \times B$ and $\complement(X \times Y)$ have equivelant conditions they are the same set
+
+2. Prove that if $A$ has precisely $n$ distinct elements and $B$ has precisely $m$ distinct elements, where $m$ and $n$ are positive integers, then $A \times B$ has precisely $mn$ distinct elements.
+
+let $A = \{a\}, n = 1$ and $B = \{b\}, m = 1$ $\therefore A \times B = \{(a, b)\}, \lvert{A \times B}\rvert = 1$
+let $n = k, A = \{ a_{1}, .., a_{k}\}, B = \{b\} \therefore A \times B = \{(a_{1}, b),..., (a_{k}, b) \}$, $\lvert {A \times B}\rvert = k $
+for $n = k+1$, $A_{k+1}= \{ a_{1}, ... , a_{k}, a_{k+1}\}, B = \{ b\},A_{k+1} \times B = \{(a_{1}, b), ..., (a_{k}, b), (a_{k+1}, b)\} $, $\lvert A \times B \rvert = k+1$
+such that for $n \in \mathbb{N}, \lvert {A \times B}\rvert = n$
+let $m = k, n = n$, $A = \{a_{1}, .., a_{n} \}, B = \{b_{1}, ..., b_{k} \} \therefore A \times B = \{ (a_{1}, b_{1}), ..., (a_{1}, b_{k}), ..., (a_{n}, b_{1}), ..., (a_{n}, b_{k})\}$$ \lvert{A \times B}\rvert = kn$, since for $\forall a \in A, \exists (a, b) \in A \times B, \forall b \in B$
+now let $B = \{b_{1}, ..., b_{k}, b_{k+1} \} \therefore A \times B = \{(a_{1}, b_{1}), ..., (a_{1}, b_{k}), ..., (a_{n}, b_{1}), ..., (a_{n}, b_{k}), ..., (a_{1}, b_{k+1}), ..., (a_{n}, b_{k+1})\} $$\lvert{A \times B}\rvert = (k+1)n $ therefore if $\lvert{A}\rvert = n, \lvert{B}\rvert = m, \lvert{A \times B}\rvert = mn$
+
+3. Let $A$ and $B$ be sets, both of which have at least two distinct members. Prove that there is a subset $W \subset A \times B$ that is not the Cartesian product of $A$ with a subset of $B$. [Thus, not every subset of a Cartesian product is the Cartesian product of a pair of subsets.]
+
+let $A = \{ a_{1}, a_{2}\}, B = \{ b_{1}, b_{2}\}, A \times B = \{(a_{1}, b_{1}), (a_{1}, b_{2}), (a_{2}, b_{1}), (a_{2}, b_{2})\}$
+let $W = \{ (a_{1}, b_{2}), (a_{2}, b_{1})\} \therefore W \subset A \times B$, and $W$ cannot be a Cartesian product of two subsets as each pair in $W$ contains elements not in the other pair
+
+
+
+
