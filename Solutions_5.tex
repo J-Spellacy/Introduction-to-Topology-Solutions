@@ -1,0 +1,32 @@
+1. Let $f:A \rightarrow B$ be given. Prove the following:
+(a) For each subset $X \subset A, X \subset f^{-1}(f(X))$.
+
+Firstly, from the definition of a function: $f:A \rightarrow B, x \in A, f(x) \in B \iff x' = x \implies f(x) = f(x')$  essentially given a value $x$ there is only one unique $f(x)$ but it is not necessarily true that $x$ is unique for $f(x)$ $f(x) \in B, f^{-1}(f(x)) = X, X \subset A, x \in X$
+
+given then that $X \subset A, f(X) =  y \iff \forall x \in X, f(x) = y, x \in f^{-1}(y)$ and that $\forall x, x' \in X, f(x) = f(x')$
+$\therefore \forall x \in X, x \in f^{-1}(f(x))$
+$\therefore X \subset f^{-1}(f(X))$
+
+(b) For each subset $Y \subset B, Y \supset f(f^{-1}(Y))$.
+
+given $Y \subset B$ and from the earlier definition we know that $f^{-1}(Y) = \{ x \mid x \in A, f(x) \in Y, x \in f^{-1}(f(x))\}$
+$\therefore y \in f(f^{-1}(Y)) \iff y = f(x), x \in f^{-1}(Y)$
+$\therefore y \in f(f^{-1}(Y)),  f(x) \in Y $
+$\therefore y \in Y, f(f^{-1}(Y)) \subset Y$
+
+(c) If $f:A \rightarrow B$ is one-one, then for each subset $X \subset A$, $$f^{-1}(f(X)) = X.$$
+from part a, $X \subset A \therefore X \subset f^{-1}(f(X))$, given that $f(x)$ is one-one, $f(x) = y, f^{-1}(y) = x, \forall x, x' \in A, f(x) = f(x'), \forall y, y' \in B, f(y) = f(y')$
+essentially imaging $f^{-1}(y) = x$ as a function which takes $y$ and maps to $x$ so behaves the same as the function in part a (only possible since $f:A \rightarrow B$ is one-one).
+$\therefore \forall y \in f(X), f^{-1}(y) \in X$
+$\therefore X \subset f^{-1}(f(X)) \subset X$
+$\therefore f^{-1}(f(X)) = X$
+
+(d) If $f: A \rightarrow B$ is onto, then for each subset $Y \subset B$, $$f(f^{-1}(Y)) = Y.$$
+since $f: A \rightarrow B$ is onto, $f(A) = B, \forall y \in  f(A), y \in B$, $\forall y \in B, y \in f(A)$
+using the proof in part b we have shown that $\forall y \in f(f^{-1}(Y)), y \in Y$ 
+now $\forall y \in Y, y \in f(f^{-1}(Y))$ as per the definition of an onto or surjective function
+
+2. Let $A = \{ a_{1}, a_{2}\}$ and $B = \{ b_{1}, b_{2}\}$ be two sets, each having precisely two distinct elements. Let $f:A \rightarrow B$ be the constant function such that $f(a) = b_{1}$ for each $a \in A$.
+(a) Prove that $f^{-1}(f(a_{1})) \not = \{a_{1}\}$. [Thus it is usually the case that $f^{-1}(f(X))$ and $X$ are not equal.]
+
+
