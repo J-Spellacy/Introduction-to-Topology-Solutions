@@ -29,4 +29,45 @@ now $\forall y \in Y, y \in f(f^{-1}(Y))$ as per the definition of an onto or su
 2. Let $A = \{ a_{1}, a_{2}\}$ and $B = \{ b_{1}, b_{2}\}$ be two sets, each having precisely two distinct elements. Let $f:A \rightarrow B$ be the constant function such that $f(a) = b_{1}$ for each $a \in A$.
 (a) Prove that $f^{-1}(f(a_{1})) \not = \{a_{1}\}$. [Thus it is usually the case that $f^{-1}(f(X))$ and $X$ are not equal.]
 
+$f^{-1}(f(a_{1})) = \{ x \mid f(x) = f(a_{1})\} \therefore a_{2} \in f^{-1}(f(a_{1}))$
+$a_{2} \not \in \{ a_{1}\} \therefore f^{-1}(f(a_{1})) \not = \{a_{1}\}$
+
+(b) Prove that $f(f^{-1}(B)) \not = B$. [Thus it is usually the case that $f(f^{-1}(B))$ and $B$ are not equal.]
+
+$B = \{ b_{1}, b_{2}\}, f^{-1}(B) = f^{-1}(\{ b_{1}, b_{2}\}) $ the function is always equal  to $b_{1} \therefore f^{-1}(B) = f^{-1}(b_{1})$
+and since $\forall a \in f^{-1}(b_{1}), f(a) = b_{1}$ by definition of the inverse of a function and constant functions,
+$\therefore f(f^{-1}(B)) = b_{1} \not = B$ only the  case when $B = \{ b_{1}\}$ (confusing if this is true based on the axiom of regularity, I.e. $x \not = \{ x \}$
+
+(c) Prove that $f(\{a_{1}\} \cap \{ a_{2}\} ) \not = f(\{a_{1}\}) \cap f(\{ a_{2}\})$. [Thus it is not usually the case that $f(X \cap X') \not = f(X) \cap f(X')$.]
+
+$\{ a_{1}\} \cap \{a_{2}\} = \emptyset$, $f(\{ a_{1}\} ) = b_{1}, f(\{a_{2}\}) = b_{1} \therefore f(\{a_{1}\}) \cap f(\{ a_{2}\}) = \{b_{1}\} \not =  \emptyset$
+$\therefore f(X \cap X') = f(X) \cap f(X') \iff \forall x, x' \in X \cap X', f(x) = f(x')$
+
+4. Let $f: A \rightarrow B$ be given and let $\{ Y_{\alpha}\}_{\alpha \in I}$ be an indexed family of subsets of $B$. Prove:
+(a) $f^{-1}(\cup_{\alpha \in I}Y_{\alpha}) = \cup_{\alpha \in I} f^{-1}(Y_{\alpha}) $.
+
+$f^{-1}(\cup_{\alpha \in I} Y_{\alpha}) = \{a \mid a \in A, \exists\alpha \in I\ s.t.\  f(a) \in Y_{\alpha} \}$ 
+$a \in \cup_{\alpha \in I} f^{-1}(Y_{\alpha}) \iff a \in A, \exists\alpha \in I\ s.t.\  f(a) \in Y_{\alpha} $
+since they hold equivelant conditions for truth, they only exist if they are equal
+$\therefore f^{-1}(\cup_{\alpha \in I}Y_{\alpha}) = \cup_{\alpha \in I} f^{-1}(Y_{\alpha})$
+
+(b) $f^{-1}(\cap_{\alpha \in I}Y_{\alpha}) = \cap_{\alpha \in I} f^{-1}(Y_{\alpha}) $.
+
+
+$f^{-1}(\cap_{\alpha \in I} Y_{\alpha}) = \{a \mid a \in A, \forall\alpha \in I, f(a) \in Y_{\alpha} \}$ 
+$a \in \cap_{\alpha \in I} f^{-1}(Y_{\alpha}) \iff a \in A, \forall\alpha \in I, f(a) \in Y_{\alpha} $
+since they hold equivelant conditions for truth, they only exist if they are equal
+$\therefore f^{-1}(\cap_{\alpha \in I}Y_{\alpha}) = \cap_{\alpha \in I} f^{-1}(Y_{\alpha})$
+
+(c) If $X \subset B$ then $f^{-1}(\complement(X)) = \complement(f^{-1}(X))$.
+
+
+$f^{-1}(\complement(X)) = \{ a \mid f(a) \in B, f(a) \not \in X\}$
+$a \in \complement(f^{-1}(X)) \iff f(a) \not \in X, a \in A\ s.t.\ f:A \rightarrow B$ since $X \subset B, f^{-1}(X) \subset f^{-1}(B)$
+$\therefore a \in \complement(f^{-1}(X)) \iff f(a) \not \in X, f(a) \in B$
+since they hold equivelant conditions for truth, they only exist if they are equal
+$\therefore f^{-1}(\complement(X)) = \complement(f^{-1}(X))$
+
+(d) If $X$ is a subset of $A$, and $Y$ is a subset of $B$, then $f(X \cap f^{-1}(Y)) = f(X) \cap Y$.
+
 
