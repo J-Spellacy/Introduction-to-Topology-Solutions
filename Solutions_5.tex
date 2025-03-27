@@ -70,4 +70,12 @@ $\therefore f^{-1}(\complement(X)) = \complement(f^{-1}(X))$
 
 (d) If $X$ is a subset of $A$, and $Y$ is a subset of $B$, then $f(X \cap f^{-1}(Y)) = f(X) \cap Y$.
 
+$f(X \cap f^{-1}(Y)) = \{ y \mid y \in f(f^{-1}(Y)), y \in f(X)\}$
+$\therefore = \{y \mid y \in Y, y \in f(X)\}$ since by definition $Y =  f(f^{-1}(Y))$
+$y \in f(X)\cap Y \iff y \in f(X), y \in Y$
+since they hold equivelant conditions for truth, they only exist if they are equal
+$\therefore f(X \cap f^{-1}(Y)) = f(X) \cap Y$
+
+5. Let $A$ and $B$ be sets. The correspondence that associates with each element $(a, b) \in A \times B$ the element $p_{1}(a, b) = a$ is a function called the \textit{first projection}. The correspondence that associates with each element $(a, b) \in A \times B$ the element $p_{2}(a, b) = b$ is a function called the \textit{second projection}. Prove that if $B \not = \emptyset$, then $p_{1}:A \times B \rightarrow A$ is onto and if $A \not = \emptyset$, then$p_{2}:A \times B  \rightarrow B$ is onto. Under what circumstances is $p_{1}$ or $p_{2}$ one-one? What is $p_{1}^{-1}(\{a\})$ for an element $a \in A$?
+
 
