@@ -78,4 +78,42 @@ $\therefore f(X \cap f^{-1}(Y)) = f(X) \cap Y$
 
 5. Let $A$ and $B$ be sets. The correspondence that associates with each element $(a, b) \in A \times B$ the element $p_{1}(a, b) = a$ is a function called the \textit{first projection}. The correspondence that associates with each element $(a, b) \in A \times B$ the element $p_{2}(a, b) = b$ is a function called the \textit{second projection}. Prove that if $B \not = \emptyset$, then $p_{1}:A \times B \rightarrow A$ is onto and if $A \not = \emptyset$, then$p_{2}:A \times B  \rightarrow B$ is onto. Under what circumstances is $p_{1}$ or $p_{2}$ one-one? What is $p_{1}^{-1}(\{a\})$ for an element $a \in A$?
 
+Let $B \not = \emptyset \ s.t.\ \exists b \in B $ and $p_{1}:A \times B \rightarrow A$ is not onto,
+$\therefore p_{1}(A\times B) \not = A \therefore \exists (a, b) \in A \times B\ s.t.\ p_{1}((a, b)) \not \in A$ or $\exists a \in A\ s.t.\ a\not \in p_{1}(A\times B)$,
+$p_{1}(A \times B) = \{ a \mid  a \in A\} \therefore \forall a \in A, a \in p_{1}(A \times B)$,
+since if $a \in A, b \in B, (a, b) \in A \times B \therefore a \in p_{1}((a, b)), a \in A$.
+Therefore given the conditions $B \not = \emptyset \ s.t.\ \exists b \in B $ it must be true that $p_{1}:A \times B \rightarrow A$ is onto.
 
+The same logic applies with the conditions of $A \not = \emptyset$ and $p_{2}(A \times B) \rightarrow B$.
+
+From this we have established that $p_{1}$ is one-one when $B$ has just one unique element $B = \{ b\}, A \times B = \{ (a_{i}, b)\}_{\forall a_{i} \in A}$ because each instance of the product set is a unique $a$ with the same $b$ and thus can only be given from $p_{1}(A \times B) = \{ a \mid  a \in A\}, \forall (a, b) \in A \times B$ there are no elements in $A \times B$ that repeat the $a$
+
+$p_{1}^{-1}(\{ a\}) = \{(a, b) \mid \forall (a, b), (a', b') \in A \times B, a = a' \}$
+
+6. Let $A$ and $B$ be sets, with $B \not = \emptyset$. For each $b \in B$ the correspondence that associates with each element $a \in A$ the element $j_{b}(a) = (a, b) \in A \times B$ is a function. Prove that for each $b \in B, j_{b}:A \rightarrow A \times B$ is one-one. What is $j_{b}^{-1}(W)$ for a subset $W \subset A \times B$?
+
+For $j_{b}:A \rightarrow A \times B$ for a given $b \in B, B \not = \emptyset$ so that $b' = b, \forall(a, b), (a, b') \in j_{b}(A)$,
+Let$j_{b}:A \rightarrow A \times B$ not be one-one, since $j_{b}(a) = (a, b), j_{b}(a') = (a', b)$ $\therefore \exists a , a' \in A\ s.t.\ (a, b) = (a', b), a \not = a'$ 
+by definition of an ordered pair, if $a \not = a', (a, b) \not = (a', b)$
+thus given $b \in B$ (so for each $b \in B$) $j_{b}:A \rightarrow A \times B$ is one-one
+if we vary $b$ the same is true but over both components of an ordered pair; $j_{b}(a) = (a, b), j_{b'}(a') = (a', b')$, $(a, b) = (a', b') \iff b = b', a = a'$
+
+$j_{b}^{-1}(W) = \{ a \mid (a, b) \in W\}$ since the function can be run $\forall (a, b) \in W, \not \exists (a, b) \in W\ s.t.\ (a,b) \in j_{b}^{-1}(W)$ because $j_{b}$ is one-one
+
+7. Let $A$ be a set and $E \subset A$. The function $\mathscr{x}_{E}: A \rightarrow \{ 0, 1\}$ defined by $\mathscr{x}_{E}(x) = 1$ if $x \in E$ and $\mathscr{x}_{E}(x) = 0$ if $x \not \in E$ is called the \textit{characteristic function} of $E$. Let $E$ and $F$ be subsets of $A$, show:
+
+(a) $\mathscr{x}_{E \cap F} = \mathscr{x}_{E}\cdot \mathscr{x}_{F}$, where $\mathscr{x}_{E} \cdot \mathscr{x}_{F}(x) = \mathscr{x}_{E}(x) \mathscr{x}_F(x)$. 
+
+$\mathscr{x}_{E\cap F}(x) = 1 \iff  x \in E, x \in F$
+$\mathscr{x}_{E}(x) = 1 \iff x \in E$, $\mathscr{x}_{F}(x) = 1 \iff x \in F$
+$\therefore \mathscr{x}_{E}(x) \mathscr{x}_F(x) = 1 \iff x \in E, x \in F$
+alternatively they all equal $0$ in either case for the same $x$ $\mathscr{x}_{E \cap F} = \mathscr{x}_{E}\cdot \mathscr{x}_{F}$
+
+(b) $\mathscr{x}_{E \cup F} = \mathscr{x}_{E} + \mathscr{x}_{F} - \mathscr{x}_{E \cap F}$ and find a similar expression for $\mathscr{x}_{E \cup F \cup G}$.
+
+let $B \subset A$, 
+$\forall x \in B$ if $x \in E$ then $\mathscr{x}_{E \cup F}(B) $ increases by 1, $\mathscr{x}_{E}(B)$ increases by 1 also, the same can be said for $x \in F$ and $\mathscr{x}_{E \cup F}(B) , \mathscr{x}_{F}(B)$
+in the case that $x \in E \cap F$ then $\mathscr{x}_{E \cup F}(B)$ remains the same and $\mathscr{x}_{E}(B) + \mathscr{x}_{F}(B) - \mathscr{x}_{E \cap F}(B)$ remains the same, since all double counted $b \in B$ are taken away.
+For the cases not mentioned all functions do not change as they equal $0$
+
+$\mathscr{x}_{E \cup F \cup G} = \mathscr{x}_{E} + \mathscr{x}_{F} +  \mathscr{x}_{G} - \mathscr{x}_{E \cap F} - \mathscr{x}_{E \cap G} - \mathscr{x}_{F \cap G}$ in this way all double counts are taken away and triple counts are also dealt with.
