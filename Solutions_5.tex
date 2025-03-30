@@ -43,6 +43,26 @@ $\therefore f(f^{-1}(B)) = b_{1} \not = B$ only the  case when $B = \{ b_{1}\}$ 
 $\{ a_{1}\} \cap \{a_{2}\} = \emptyset$, $f(\{ a_{1}\} ) = b_{1}, f(\{a_{2}\}) = b_{1} \therefore f(\{a_{1}\}) \cap f(\{ a_{2}\}) = \{b_{1}\} \not =  \emptyset$
 $\therefore f(X \cap X') = f(X) \cap f(X') \iff \forall x, x' \in X \cap X', f(x) = f(x')$
 
+3. Let $f: A \rightarrow B$ be given and let $\{ X_{\alpha}\}_{\alpha \in I}$ be an indexed family of subsets of $A$. Prove:
+(a) $f(\cup_{\alpha \in I}X_{\alpha}) = \cup_{\alpha \in I} f(X_{\alpha})$.
+
+$f(\cup_{\alpha \in I} X_{\alpha}) = \{ y \mid \exists \alpha \in I\ s.t.\ y \in f(X_{\alpha})\}$
+$y \in \cup_{\alpha \in I} f(X_{\alpha}) \iff \exists \alpha \in I, y \in f(X_{\alpha})$
+$\therefore f(\cup_{\alpha \in I}X_{\alpha}) = \cup_{\alpha \in I} f(X_{\alpha})$ since if $f(\cup_{\alpha \in I}X_{\alpha})$ is True then also $\cup_{\alpha \in I} f(X_{\alpha})$ is True.
+
+(b) $f(\cap_{\alpha \in I} X_{\alpha}) \subset \cap_{\alpha \in I}f(X_{\alpha})$.
+
+$f(\cap_{\alpha \in I} X_{\alpha}) = \{ y\mid \forall \alpha \in I, y \in f(X_{\alpha})\}$
+$\forall y \in  f(\cap_{\alpha \in I} X_{\alpha})$, $y \in f(X_{\alpha}), \forall\alpha \in I$
+$\therefore f(\cap_{\alpha \in I} X_{\alpha}) \subset \cap_{\alpha \in I}f(X_{\alpha})$ these are not necessarily equal sets since its possible that:
+
+$\exists \alpha \in I\ s.t.\ \exists x, x' \in f^{-1}(f(X_{\alpha}))$ and $ x, x' \not \in \cap_{\alpha \in I} X_{\alpha}$ and $ x,x' \in \cup_{\alpha \in I} X_{\alpha}, f(x') = f(x), x \not = x', f(x) \in \cap_{\alpha \in I}f(X_{\alpha})$ possible if for every indexed subset where $x$ is not a member, then $x'$ is a member. 
+
+(c) If $f: A \rightarrow B$ is one-one, then $f(\cap_{\alpha \in I}X_{\alpha}) = \cap_{\alpha \in I}f(X_{\alpha})$.
+
+If $f(A)$ is one-one, then $f^{-1}(f(\cap_{\alpha \in I} X_{\alpha})) = x, x \in \cap_{\alpha \in I}X_{\alpha}$
+therefore from part b, the condition is now equal.
+
 4. Let $f: A \rightarrow B$ be given and let $\{ Y_{\alpha}\}_{\alpha \in I}$ be an indexed family of subsets of $B$. Prove:
 (a) $f^{-1}(\cup_{\alpha \in I}Y_{\alpha}) = \cup_{\alpha \in I} f^{-1}(Y_{\alpha}) $.
 
@@ -116,13 +136,12 @@ $\forall x \in B$ if $x \in E$ then $\mathscr{x}_{E \cup F}(B) $ increases by 1,
 in the case that $x \in E \cap F$ then $\mathscr{x}_{E \cup F}(B)$ remains the same and $\mathscr{x}_{E}(B) + \mathscr{x}_{F}(B) - \mathscr{x}_{E \cap F}(B)$ remains the same, since all double counted $b \in B$ are taken away.
 For the cases not mentioned all functions do not change as they equal $0$
 
-
 $\mathscr{x}_{E \cup F \cup G} = \mathscr{x}_{E} + \mathscr{x}_{F} +  \mathscr{x}_{G} - \mathscr{x}_{E \cap F} - \mathscr{x}_{E \cap G} - \mathscr{x}_{F \cap G}$ in this way all double counts are taken away and triple counts are also dealt with.
 
 8. Let $A$ be a set to which there belongs precisely $n$ distinct objects. Prove that there are precisely $2^n$ distinct objects that belong to $2^{A}$.
 
-$\lvert{A}\rvert = n, A = \{a_{1}, a_{2}, ..., a_{n} \}$, for all subsets $W \subset A, \lvert{W}\rvert = w$, 
-where $w$ is the number representing the elements in $W$
-$\forall a \in W$ either $a \in W$ or $a \not \in W$, so that to get the size of all combinations of subsets where order doesn't matter is $2^{\lvert{W}\rvert}$
-$\lvert{W}\rvert =w,\lvert{2^{W}}\rvert=  2^{\lvert{W}\rvert}$.
-$\therefore \lvert{2^{A}}\rvert = 2^{n}$ 
+$\lvert{A}\rvert = n, A = \{a_{1}, a_{2}, ..., a_{n} \}$, for all subsets $W \subset A$, 
+$\forall a \in A$ either $a \in W$ or $a \not \in W$, so that to get the size of all combinations of subsets of $A$ where order doesn't matter is $2^{\lvert{A}\rvert}$ or $2^{n}$ because whether $a \in W$ or $a \not \in W$, that makes two distinct sets, so in order to get the total number of distinct sets you take the product of each of these.
+
+
+
