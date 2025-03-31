@@ -1,0 +1,9 @@
+1. Let $P$ be a subset of the real numbers $R$ such that (i) $1 \in P$, (ii) if $a,b \in P$ then $a + b \in P$, and (iii) for each $x \in R$, one and only one of the three statements, $x \in P, x =0 $, or $-x \in P$ is true. Define $Q = \{ (a, b) \mid (a, b) \in R \times R \ \text{and}\ a-b \in P\}$. Prove that $Q$ is a transitive relation.
+
+$Q =  \{ (a, b) \mid (a, b) \in \mathbb{R},\  a - b \not = 0,\ b-a \not \in P, \forall(a', b') \in Q, a+a'-b-b' \in P\}$
+lets say $(a, b) \in Q, (b,c) \in Q$,
+$\therefore a-b \not = 0, b-a \not \in P, b - c \not = 0, c-b \not \in P$ and $a+b - b-c \in P$
+$a+b - b+c = a+c \therefore a-c \in P$
+if $a-c \in P \therefore (a, c) \in Q$
+
+
